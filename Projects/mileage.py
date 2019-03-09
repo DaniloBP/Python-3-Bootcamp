@@ -7,6 +7,6 @@ miles = round(miles, 2)
 if miles <= 10.0:
 	print(f"\nOK, good run.\t({kms} kilometers is equal to {miles} miles)\n" )
 elif miles <= 15.0:
-	print(f"\nOK, I see you! Great run, my brother\\sister.\t({kms} kilometers is equal to {miles} miles)\n" )
+	print(f"\nOK, I see you! Great run.\t({kms} kilometers is equal to {miles} miles)\n" )
 else:
-	print(f"\nDamn, son!!! You went full Kenian mode today, my man.\t({kms} kilometers is equal to {miles} miles)\n" )
+	print(f"\nDamn, son!!! You went full Kenian mode today.\t({kms} kilometers is equal to {miles} miles)\n" )
