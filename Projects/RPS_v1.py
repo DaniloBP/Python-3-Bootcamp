@@ -32,9 +32,14 @@ if player2:
 print(f"\nPlayer 1 chose: {player1}\n")
 print(f"\nPlayer 2 chose: {player2}\n")
 
-if (player1 == "ROCK" and player2 == "SCISSORS") or (player1 == "PAPER" and player2 == "ROCK") or (player1 == "SCISSORS" and player2 == "PAPER"):
+if player1 == player2:
+	print("\n\t --->> It's a TIE! NOBODY won!\n")
+elif player1 == "ROCK" and player2 == "SCISSORS":
 	print("\n\t ---> PLAYER 1 is the WINNER!!\n")
-elif (player2 == "ROCK" and player1 == "SCISSORS") or (player2 == "PAPER" and player1 == "ROCK") or (player2 == "SCISSORS" and player1 == "PAPER"):
-	print("\n\t ---> PLAYER 2 is the WINNER!!\n")
+elif player1 == "PAPER" and player2 == "ROCK":
+	print("\n\t ---> PLAYER 1 is the WINNER!!\n")
+elif player1 == "SCISSORS" and player2 == "PAPER":
+	print("\n\t ---> PLAYER 1 is the WINNER!!\n")
 else:
-	print("\n\t --->> It's a TIE! NOBODY wan!\n")
+	print("\n\t ---> PLAYER 2 is the WINNER!!\n")	
+
