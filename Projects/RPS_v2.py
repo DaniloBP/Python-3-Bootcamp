@@ -11,7 +11,6 @@ cpu = choice(['ROCK','PAPER', 'SCISSORS'])
 
 if player1:
 	print("\nCPU choice -->  " + cpu + "\n")
-#	print("\nPLAYER 1 choice -->  " + player1 + "\n")
 
 	if player1 == "1" and cpu == "SCISSORS":
 		player1 = "ROCK"
