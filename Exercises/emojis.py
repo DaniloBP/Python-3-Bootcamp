@@ -28,8 +28,23 @@
 # ---------------------------
 num = 1
 print("")
-while num <= 10:
-	print("$ " * num)
+while num < 10:
+	print("$" * num)
 	num += 1
+
+print("")
+
+
+# ----------------
+
+# Prints a triangle
+top = 20
+rang = range(1, top, 2)
+
+for seq in rang:
+	print("  " * int((top-seq)/2), end="")
+	print("& " * seq, end="")
+#	print("  " * int((top-seq)/2), end="")
+	print("")
 
 print("")
