@@ -26,13 +26,13 @@
 # 	print("&" * seq)
 
 # ---------------------------
-num = 1
-print("")
-while num < 10:
-	print("$" * num)
-	num += 1
+# num = 1
+# print("")
+# while num < 10:
+# 	print("$" * num)
+# 	num += 1
 
-print("")
+# print("")
 
 
 # ----------------
@@ -41,9 +41,11 @@ print("")
 top = 20
 rang = range(1, top, 2)
 
+print("")
+
 for seq in rang:
 	print("  " * int((top-seq)/2), end="")
-	print("& " * seq, end="")
+	print("$ " * seq, end="")
 #	print("  " * int((top-seq)/2), end="")
 	print("")
 
