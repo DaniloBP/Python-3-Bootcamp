@@ -16,8 +16,8 @@ while True:
 			print("\nThank you for playing!\n\n")
 			break
 	elif guess > number:
-		print("\nToo HIGH, bitch!\n")
+		print("\nToo HIGH!\n")
 	else:
-		print("\nToo LOW, mothafucker!\n")
+		print("\nToo LOW!\n")
 
 
