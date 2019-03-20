@@ -15,3 +15,13 @@ print(empty)															# a dictionary with DEFAULT values.
 
 name = person.get("first_name") + " " + person.get("last_name")		# .get() returns the value associated with the given key.
 print(name)															#  In case of the there's no such key it returns 'None'.
+
+# removed = empty.pop("Address")		# Removes the object and returns the value associated with the given key.
+
+# removed = empty.popitem()		# Removes a random key and the value(s) associated with it.
+# print(removed)
+# print(empty)
+
+person3 = { "country" : "Australia"}	# Updates a dictionary with data from another one but don't removes the existing
+person3.update(person)					# values in the updated dictionary but if there's equal keys those are overwritten,
+print(person3)							# i.e., it only adds or updates values and keys, never deletes them. 
