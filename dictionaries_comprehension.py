@@ -20,10 +20,28 @@
 # new_dict = { num : ("even" if num % 2 == 0 else "odd") for num in range(1,11) }		# Conditional logic in dictionary comprehension can be applied to keys and values.
 # print(new_dict)
 
-# EXERCISES
+# EXERCISE 1
 
 person = [["name", "Jared"], ["job", "Musician"], ["city", "Bern"]]
 
 # use the person variable in your answer
-answer = { }
+answer = { person[i][0] : person[i][1] for i in range(0, len(person)) }		# My solution
+
+# answer = {thing[0]: thing[1] for thing in person}		# Solution #2
+
+# answer = {k:v for k,v in person}						# Solution #3
+
+# If you have a list of pairs, you can very easily turn it into a dictionary using dict()
+# answer = dict(person)									# Solution #4
+
+print(answer)
+
+# EXERCISE 2
+
+answer = { vow : 0 for vow in ['a', 'e', 'i', 'o', 'u'] }
+print(answer)
+
+# EXERCISE 3
+
+answer = { ascii : chr(ascii) for ascii in range(65, 91) }
 print(answer)
