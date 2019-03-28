@@ -65,13 +65,32 @@ print(list_manipulation([1,2,3], "add", "end", 30) ) #  [1,2,3,30]
 '''
 
 # 5 -------------------------------------
-
 def is_palindrome(statement):
     statement = statement.replace(" ", "")
     statement = statement.lower()
     
     return statement == statement[::-1]
-
+'''
 print( is_palindrome("Hannah") )
 print( is_palindrome("a man a plan a canal Panama") )
 print( is_palindrome("Hello") )
+'''
+
+# 6 -----------------------------------
+def frequency(a_list, search_term):
+    return a_list.count(search_term)
+'''
+print( frequency([1,2,3,4,4,4], 4) ) # 3
+print( frequency([True, False, True, True], False) ) # 1
+print( frequency([True, 'a', 'z', 5, 'a', 7.8], 'a') ) # 2
+'''
+# 7 -----------------------------------
+def capitalize(string):
+	first = string[0].upper()
+	remaining = string[1::]    
+	return (first + remaining)
+	# return string[:1].upper() + string[1:]	# Also works
+
+print( capitalize("tim") )# "Tim"
+print( capitalize("matt") ) # "Matt")
+print( capitalize("a man gotta do what a man gotta do") ) # "Matt")
