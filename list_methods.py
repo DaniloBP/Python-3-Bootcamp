@@ -4,7 +4,7 @@ print(f"\nList after append: {numbers}\n")
 
 # numbers.append(5, 6, 7)   Won't work.
 # 
-# We'll treat this list as a single element of type "List"
+# It will treat this list as a single element of type "List"
 numbers.append([6, 7, 8])  
 print(f"\nList after append a list: {numbers}\n")
 
