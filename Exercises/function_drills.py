@@ -1,5 +1,6 @@
 # EXERCISES ON FUNCTIONS
 
+# 1
 # A more advanced version of the same function.
 def return_day_advanced(num):
     try:
@@ -123,7 +124,7 @@ def partition(collection, fnc):
     # return [[val for val in collection if fnc(val)], [val for val in collection if not fnc(val)]]  # List Comprehension solution.
  
     # Removes all truthy values leaving only the falsies in the original list.
-    # return [[collection.pop(collection.index(i)) for i in collection if callback(i)],collection]  # Works just fine too.  
+    # return [[collection.pop(collection.index(i)) for i in collection if callback(i)],collection]  # Works just fine.  
 
 print( partition( [1,2,3,4], isEven ) ) # [[2,4],[1,3]]
 print( partition( [0,1,2,"",[], False, {}, None, "All done"], isTruthy ) )  # [ [1,2,"All done"], [0,"",[],False,{},none] ]
