@@ -28,4 +28,4 @@ def is_all_strings(collection):
 
 print(is_all_strings(['a', 'b', 'c']))
 print(is_all_strings(['a', 'b', 'c', 5]))
-print(is_all_strings(["hello", "love", "beauty", "ghdngvjkdvhv khhjjfjf 11232323"]))
+print(is_all_strings(["hello", "love", "beauty", "ghdngvjkdvhv 112323"])
