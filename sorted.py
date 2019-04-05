@@ -17,14 +17,15 @@ sorted_nums = sorted(numbers, reverse=True)
 print(sorted_nums)
 
 users = [ 
-  	{ "user_name" : "MChammer", "shopcart" : ["HeadPhone Beats", "Mouse Microsoft"]},
-  	{ "user_name" : "Paul_George", "shopcart" : ["Basket Ball NIKE", "T-shirt 76ers"]},
-  	{ "user_name" : "KittyKat", "shopcart" : []},
-  	{ "user_name" : "Rainbow_Killer", "shopcart" : ["Pro Bow", "Silver Arrows"]},
-  	{ "user_name" : "GodsSlayer", "shopcart" : []},
-  	{ "user_name" : "T'chala", "shopcart" : []},
-  	{ "user_name" : "Sam", "shopcart" : []}
+  	{ "username" : "Mchammer", "shopcart" : ["HeadPhone Beats", "Mouse Microsoft"]},
+  	{ "username" : "Paul_George", "shopcart" : ["Basket Ball NIKE", "T-shirt 76ers"]},
+  	{ "username" : "KittyKat", "shopcart" : []},
+  	{ "username" : "Rainbow_Killer", "shopcart" : ["Pro Bow", "Silver Arrows"]},
+  	{ "username" : "GodsSlayer", "shopcart" : []},
+  	{ "username" : "Tchala", "shopcart" : []},
+  	{ "username" : "Sam", "shopcart" : []}
 ]
 
-users = sorted( users, key=lambda user: user["shopcart"] )	# It isn't working properly.
+# users = sorted( users, key=lambda user: user["username"] )	# Sorts the list of dicts by the "username" key.
+users = sorted( users, key=lambda user: len(user["shopcart"]), reverse=True)
 print(users)
