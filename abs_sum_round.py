@@ -18,6 +18,7 @@ ints = [1,2,3,4]
 # print( round(7.4542, 3) )	# 7.454
 
 # -------- EXERCISE ---------
+# 1)
 def max_magnitude(collection):
 	i = 0
 	while i < len(collection):
@@ -26,5 +27,28 @@ def max_magnitude(collection):
 	return max(collection)
 	#     return max(abs(num) for num in nums)		# Works too.
 
-print( max_magnitude([200,300,-999]) )	# 999
-print( max_magnitude([-22,-54,-2]) )	# 54
+# print( max_magnitude([200,300,-999]) )	# 999
+# print( max_magnitude([-22,-54,-2]) )	# 54
+
+# 2)
+# define sum_even_values
+def sum_even_values(*nums):
+    total = 0
+    for num in nums:
+        if num % 2 == 0:
+            total += num
+    return total
+
+def lean_sum_even_values(*nums):
+	return sum(num for num in nums if num % 2 == 0)
+
+# print(lean_sum_even_values(1,2,3,4,5,6)) # 12
+# print(lean_sum_even_values(4,2,1,10)) # 16
+# print(lean_sum_even_values(1)) # 0
+
+# 3)
+def sum_floats(*nums):
+	return sum(num for num in nums if type(num) == float)
+
+print(sum_floats(1.5, 2.4, 'awesome', [], 1)) # 3.9
+print(sum_floats(1,2,3,4,5)) # 0
