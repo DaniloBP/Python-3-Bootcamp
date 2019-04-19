@@ -10,6 +10,19 @@ def divide(a, b):
 	else:
 		print(f" {a} divided by {b} is {result}")
 
-divide(3,0)
-divide(3,'a')		
-divide(3,15)		
+# EXERCISE
+def divide_v2(a, b):
+	try:
+		return a/b
+	except ZeroDivisionError:
+		print("Please do not divide by zero")
+	except TypeError:
+		print("Please provide two integers or floats")
+
+# divide(3,0)
+# divide(3,'a')		
+# divide(3,15)		
+
+print(divide_v2(4,2))  # 2.0
+divide_v2([],"1")  # "Please provide two integers or floats"
+divide_v2(1,0)  # "Please do not divide by zero"

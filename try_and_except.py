@@ -6,7 +6,6 @@
 # 	print("PROBLEM!!")
 # print("After the TRY.")
 
-
 def get(diction, key):
 	try:
 		return diction[key]
