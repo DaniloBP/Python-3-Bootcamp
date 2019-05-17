@@ -12,7 +12,7 @@ url = "https://icanhazdadjoke.com/search"
 # response = requests.get(url)
 # response = requests.get(url, headers={"Accept": "text/plain"})
 response = requests.get(
-						url, 
+						url, 																										
 						headers = {"Accept" : "application/json"},
 						params = {"term" : topic}
 						)
