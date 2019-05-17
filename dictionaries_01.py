@@ -1,5 +1,5 @@
 
-person = { "first_name" : "Joel", "last_name" : "Embid", "height" : 2.15}
+person = { "first_name" : "Joel", "last_name" : "Embiid", "height" : 2.15}
 #print(person)
 
 person2 = dict(first_name = "Ben",last_name = "Simmons", height = 2.10)

@@ -19,9 +19,9 @@ response = requests.get(
 
 data = response.json()
 length = len(data["results"])
+
 if length >= 1:
 	number = random.randint(0, length-1)
-# print(data["results"])
 
 if length == 0:
 	print(f"Sorry, I don't have any joke about {topic}. Better lucky next time.")
