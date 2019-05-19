@@ -16,7 +16,7 @@ pet1 = Pet("Arn", "cat")
 # pet2 = Pet("The G.O.A.T.", "goat")
 pet2 = Pet("The G.O.A.T.", "dog")
 
-# They all share the same list 'allowed' as you can on the prints bellow.
+# They all share the same list 'allowed' as you can see on the prints bellow.
 print(id(Pet.allowed))
 print(id(pet1.allowed))
 print(id(pet2.allowed))
