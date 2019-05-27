@@ -17,7 +17,5 @@ class Card:
 		self.value = value
 
 	def __repr__(self):
-		return f"{self.value} of {self.suit}"
-
-# card1 = Card("Hearts", "J")
-# print(card1)	
+		# return f"{self.value} of {self.suit}"
+		return self.value + " of " + self.suit
