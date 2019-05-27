@@ -1,10 +1,10 @@
-# Represents a single Card that must have a SUIT ("Hearts", "Diamonds", "Clubs" or "Spades") and
-# a value ("A", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q" and "K").
+# Represents a single Card that must have a SUIT ("Hearts"suits = ["Hearts", "Diamonds", "Clubs" or "Spades"]
+# and a value ("A", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q" or "K").
 
-class Card(object):
-	
-	suits = ["Hearts", "Diamonds", "Clubs" or "Spades"]
-	values = ["A", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
+class Card:
+
+	suits = ["Hearts", "Diamonds", "Clubs", "Spades"]
+	values = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]	
 
 	def __init__(self, suit, value):
 
@@ -19,6 +19,5 @@ class Card(object):
 	def __repr__(self):
 		return f"{self.value} of {self.suit}"
 
-
-card1 = Card("Hearts", "J")
-print(card1)	
+# card1 = Card("Hearts", "J")
+# print(card1)	
