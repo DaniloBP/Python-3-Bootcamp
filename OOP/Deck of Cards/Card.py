@@ -11,11 +11,11 @@ class Card:
 		if suit not in Card.suits:
 			raise ValueError(f"You can't have '{suit}' as a Suit.")
 		if value not in Card.values:
-			raise ValueError(f"You can't have {value}' as a Value.")
+			raise ValueError(f"You can't have '{value}' as a Value.")
 			
 		self.suit = suit
 		self.value = value
 
 	def __repr__(self):
 		# return f"{self.value} of {self.suit}"
-		return self.value + " of " + self.suit
+		return "{} of {}".format(self.value, self.suit)

@@ -6,48 +6,36 @@ class Deck:
 	suits = ["Hearts", "Diamonds", "Clubs", "Spades"]
 	values = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
 
-	def __init__(self):
-	
-		self.total_cards = 0
-		self.cards = []
-
-		for suit in Deck.suits:
-			for value in Deck.values:
-				self.cards.append( Card(suit, value) )
-				self.total_cards += 1
+	def __init__(self):	
+		self.cards = [ Card(suit, value) for suit in Deck.suits for value in Deck.values ]
 
 	def __repr__(self):
 		# return f"Deck of {self.count()} cards"
-		return "Deck of " + str(self.count()) + " cards"
+		return "Deck of {} cards".format(self.count())
 
-	def _deal(self, amount = 1):
+	def _deal(self, num = 1):
 		if self.count() == 0:
 			raise ValueError("All cards have been dealt")
-		elif amount == 1:
-			self.total_cards -= 1
-			return self.cards.pop(-1)	# Returns a single card from the deck.
-		elif amount > self.count():
-			amount = self.count()
+		# Gets the minimum between the hand and the number of remaining cards  in the deck.
+		num = min(self.count(), num)
 
-		popped = []
-		while amount > 0:
-			popped.append( self.cards.pop() )
-			self.total_cards -= 1
-			amount -= 1
-		return popped
+		hand = self.cards[-num:]
+		self.cards = self.cards[:-num]
+		return hand
 
 	def deal_card(self):
-		return self._deal()
+		# Returns the first element of an one-element list.
+		return self._deal()[0]
 
-	def deal_hand(self, amount):
-		return self._deal(amount)
+	def deal_hand(self, hand_size):
+		return self._deal(hand_size)
 
 	def shuffle(self):
 		if self.count() < 52:
 			raise ValueError("Only full decks can be shuffled")
-		elif self.count() == 52:
-			shuffle(self.cards) 
-			return self.cards
+			
+		shuffle(self.cards) 
+		return self
 
 	def display_cards(self):
 		num = 0
@@ -56,4 +44,4 @@ class Deck:
 			num += 1
 
 	def count(self):
-		return self.total_cards
+		return len(self.cards)
