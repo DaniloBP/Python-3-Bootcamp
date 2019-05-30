@@ -16,8 +16,19 @@ class Human:
 			raise ValueError("The age must be a positive number!")
 		self._age = value	
 
+	@property
+	def full_name(self):
+		return f"{self.first} {self.last}"
+
+	@full_name.setter
+	def full_name(self, name):
+		# This is just for illustration, it isn't a good practice.
+		self.first, self.last = name.split(" ")		
+
+	
 person = Human("Ron", "Salmen", 45)
 # print(person.get_age())
 print(person.age)
-person.age = 25
-print(person.age)
+print(person.full_name)
+person.full_name = "Carl Smith"
+print(person.full_name)
