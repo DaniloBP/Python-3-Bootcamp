@@ -6,7 +6,7 @@ class Animal:
 		self.species = species
 
 	def make_sound(self, sound):
-		print(f"{self.name} says '{sound}'")		
+		raise NotImplementedError("Subclass needs to implement this method!")		
 
 	def __repr__(self):
 		return f"{self.name} is a {self.species}"
